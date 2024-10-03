@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Equipos Ganadores del Super Bowl</title>
+    <style>
+        body {
+            background-color: #222;
+            color: white;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+
+        .container {
+            width: 90%;
+            margin: 0 auto;
+        }
+
+        header {
+            background-color: black;
+            color: yellow;
+            padding: 20px;
+            font-size: 2.5em;
+            font-weight: bold;
+        }
+
+        header p {
+            font-size: 1.2em;
+            margin: 10px 0;
+            color: white;
+        }
+
+        table {
+            width: 100%;
+            margin: 20px 0;
+            border-collapse: collapse;
+        }
+
+        table td {
+            padding: 20px;
+            text-align: center;
+            vertical-align: middle;
+        }
+
+        table img {
+            width: 100px;
+        }
+
+        table, th, td {
+            border: 2px solid white;
+        }
+
+        .team-text {
+            color: yellow;
+            font-size: 1em;
+        }
+
+        hr {
+            border: 1px solid white;
+            width: 100%;
+        }
+
+        .audio-container {
+            margin: 20px 0;
+        }
+
+        footer {
+            background-color: black;
+            color: yellow;
+            padding: 20px;
+            font-size: 1em;
+            text-align: center;
+        }
+
+        footer a {
+            color: yellow;
+            text-decoration: none;
+        }
+
+        footer p {
+            margin: 5px 0;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <!-- Encabezado -->
+        <header>
+            LOS EQUIPOS MÁS GANADORES DEL SUPERBOWL
+            <p>(GANADORES DE 4 O MÁS TROFEOS VINCE LOMBARDI)</p>
+        </header>
+
+        <!-- Tabla con Imágenes de Equipos Ganadores (Steelers y Patriots) -->
+        <table>
+            <tr>
+                <td>
+                    <img src="Imágenes/steelers_h.jpg" alt="Pittsburgh Steelers">
+                </td>
+                <td>
+                    <img src="Imágenes/patriots_h.jpg" alt="New England Patriots">
+                </td>
+            </tr>
+            <tr>
+                <td class="team-text">Los Acereros de Pittsburgh fue el primer equipo en lograr 6 triunfos en el Superbowl (1975, 1976, 1979, 1980, 2006 y 2009).</td>
+                <td class="team-text">Los Patriotas de New England es el segundo equipo en lograr 6 triunfos en el Superbowl (2002, 2004, 2005, 2015, 2017, 2019).</td>
+            </tr>
+        </table>
+
+        <!-- Línea blanca de separación -->
+        <hr>
+
+        <!-- Reproductor de audio -->
+        <div class="audio-container">
+            <audio controls>
+                <source src="Imágenes/nfl.mp3" type="audio/mpeg">
+            </audio>
+        </div>
+
+        <!-- Tabla con Cascos de los Equipos Ganadores -->
+        <table>
+            <tr>
+                <td>
+                    <img src="Imágenes/dallas_h.jpg" alt="Dallas Cowboys">
+                    <p>1972, 1978, 1993, 1994 y 1996</p>
+                </td>
+                <td>
+                    <img src="Imágenes/49s_h.jpg" alt="San Francisco 49ers">
+                    <p>1982, 1985, 1989, 1990 y 1995</p>
+                </td>
+                <td>
+                    <img src="Imágenes/packers_h.jpg" alt="Green Bay Packers">
+                    <p>1967, 1968, 1997 y 2011</p>
+                </td>
+                <td>
+                    <img src="Imágenes/gigants_h.jpg" alt="New York Giants">
+                    <p>1987, 1991, 2008 y 2012</p>
+                </td>
+            </tr>
+        </table>
+
+        <!-- Footer -->
+        <footer>
+            Broncos (3), Raiders (3), Redskins (3), Delfines (2), Potros (2), Cuervos (2)
+            <p>¿Quieres conocer más? Visita <a href="https://nfl.com" target="_blank">nfl.com</a></p>
+        </footer>
+    </div>
+
+</body>
+</html>
