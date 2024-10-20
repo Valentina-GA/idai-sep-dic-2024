@@ -50,6 +50,8 @@
         th, td {
             padding: 10px;
         }
+    
+       
     </style>
 </head>
 <body>
@@ -97,4 +99,37 @@
                 <label><input type="checkbox" name="ingredientes" value="cebolla_morada"> Cebolla Morada</label><br>
                 <label><input type="checkbox" name="ingredientes" value="queso_gouda"> Queso Gouda</label><br>
                 <label><input type="checkbox" name="ingredientes" value="piña"> Piña</label><br>
-                <label><input type="checkbox" name="ingredientes" value="champ
+                <label><input type="checkbox" name="ingredientes" value="champiñones">Champiñones</label><br>
+
+                <div class="container">
+                    <h2>Pedido de Hamburguesas</h2>
+                    
+                    <label for="numHamburguesas">Cantidad de Hamburguesas:</label>
+                    <input type="number" id="numHamburguesas" name="numHamburguesas" min="1" required>
+            
+                    <label for="nombreComprador">Nombre del Comprador:</label>
+                    <input type="text" id="nombreComprador" name="nombreComprador" required>
+            
+                    <label for="telefonoComprador">Teléfono del Comprador:</label>
+                    <input type="text" id="telefonoComprador" name="telefonoComprador" required>
+            
+                    <label for="opcionEntrega">¿Desea entrega a domicilio?</label>
+                    <select id="opcionEntrega" name="opcionEntrega" required>
+                        <option value="domicilio">A Domicilio</option>
+                        <option value="local">Para consumir en el local</option>
+                    </select>
+            
+                    <button id="calcularBtn">Calcular Pedido</button>
+                </div>
+            
+                <script>
+                    document.getElementById('calcularBtn').addEventListener('click', function() {
+                        const numHamburguesas = document.getElementById('numHamburguesas').value;
+                        const nombreComprador = document.getElementById('nombreComprador').value;
+                        const telefonoComprador = document.getElementById('telefonoComprador').value;
+                        const opcionEntrega = document.getElementById('opcionEntrega').value;
+            
+                        // Aquí puedes añadir la lógica para calcular el total del pedido
+                        alert(`Pedido de ${numHamburguesas} hamburguesas para ${nombreComprador} (${telefonoComprador})\nEntrega: ${opcionEntrega}`);
+                    });
+                </script>
