@@ -1,22 +1,95 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ejercicio Hamburguesas
-    </title>
+    <title>Menú de Hamburguesas</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .header {
+            display: table;
+            width: 100%;
+        }
+        .column {
+            display: table-cell;
+            vertical-align: top;
+        }
+        .left-column {
+            width: 25%;
+            text-align: center;
+        }
+        .right-column {
+            width: 75%;
+            background-color: lightblue;
+            padding: 10px;
+        }
+        hr {
+            border: 1px solid orange;
+        }
+        .marquee {
+            background-color: lightpurple;
+            color: white;
+            font-family: 'Courier New', Courier, monospace;
+            padding: 5px;
+        }
+        .green-line {
+            border-top: 3px solid green;
+            margin: 20px 0;
+        }
+        table {
+            width: 100%;
+            margin-top: 20px;
+        }
+        th, td {
+            padding: 10px;
+        }
+    </style>
 </head>
 <body>
-    
+
+    <div class="header">
+        <div class="column left-column">
+            <img src="logohamburgesa.png" alt="Logotipo" style="width: 90%;">
+        </div>
+        <div class="column right-column">
+            <h1>Nombre del Negocio</h1>
+            <hr>
+            <p>Dirección: Calle Ejemplo 123</p>
+            <p>Teléfono: 123-456-7890</p>
+            <p>Página Web: www.ejemplo.com</p>
+            <div class="marquee">
+                <marquee>¡Sabor que te atrapa, en cada mordida!</marquee>
+            </div>
+        </div>
+    </div>
+
+    <div class="green-line"></div>
+
     <table>
-        <thead></thead>
         <tr>
-             <th>Seleccionar producto</th>
-             <th>Detalles de mi hamburguesa</th>
-             <th>Cantidad y orden</th>
-        </tr>
-        <tbody></tbody>
-        <tfoot></tfoot>
-    </table>
-</body>
-</html>
+            <td>
+                <h3>Selecciona tu hamburguesa:</h3>
+                <label><input type="radio" name="hamburguesa" value="sencilla"> Sencilla - $35.00</label><br>
+                <label><input type="radio" name="hamburguesa" value="especial"> Especial - $45.00</label><br>
+                <label><input type="radio" name="hamburguesa" value="doble"> Doble - $60.00</label><br>
+                <label><input type="radio" name="hamburguesa" value="suprema"> Suprema - $90.00</label><br>
+                
+                <h3>Selecciona el tipo de carne:</h3>
+                <label><input type="radio" name="carne" value="tradicional"> Tradicional</label><br>
+                <label><input type="radio" name="carne" value="angus"> Angus</label><br>
+                <label><input type="radio" name="carne" value="pollo"> Pollo</label><br>
+                <label><input type="radio" name="carne" value="roast_beef"> Roast Beef</label><br>
+            </td>
+            <td>
+                <h3>Selecciona los ingredientes:</h3>
+                <label><input type="checkbox" name="ingredientes" value="tomate"> Tomate</label><br>
+                <label><input type="checkbox" name="ingredientes" value="cebolla"> Cebolla</label><br>
+                <label><input type="checkbox" name="ingredientes" value="queso_amarelo"> Queso Amarillo</label><br>
+                <label><input type="checkbox" name="ingredientes" value="jamon"> Jamón</label><br>
+                <label><input type="checkbox" name="ingredientes" value="aguacate"> Aguacate</label><br>
+                <label><input type="checkbox" name="ingredientes" value="cebolla_morada"> Cebolla Morada</label><br>
+                <label><input type="checkbox" name="ingredientes" value="queso_gouda"> Queso Gouda</label><br>
+                <label><input type="checkbox" name="ingredientes" value="piña"> Piña</label><br>
+                <label><input type="checkbox" name="ingredientes" value="champ
