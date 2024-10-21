@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recibo Telefónico</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .receipt-container {
+            background-color: #ADD8E6;
+            padding: 20px;
+            border: 2px solid black;
+            border-radius: 10px;
+            max-width: 400px;
+            width: 100%;
+        }
+
+        h2 {
+            text-align: center;
+            color: black;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        label {
+            font-weight: bold;
+            margin-bottom: 5px;
+            display: block;
+            color: black;
+        }
+
+        input[type="text"], select {
+            width: 100%;
+            padding: 8px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .radio-group, .checkbox-group {
+            margin: 10px 0;
+        }
+
+        .radio-group label, .checkbox-group label {
+            display: inline-block;
+            margin-right: 10px;
+        }
+
+        input[type="radio"], input[type="checkbox"] {
+            margin-right: 5px;
+        }
+
+        .package-group {
+            margin: 10px 0;
+            border: 2px solid black;
+            padding: 10px;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+        }
+
+        .package-group ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .package-group ul li {
+            margin: 5px 0;
+        }
+
+        .package-group ul li::before {
+            content: '✔ ';
+            color: green;
+            font-weight: bold;
+        }
+
+        button {
+            width: 100%;
+            background-color: #007BFF;
+            color: white;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="receipt-container">
+        <h2>RECIBO TELEFÓNICO</h2>
+        <form id="paymentForm" action="/submit" method="post">
+            <!-- Minutos -->
+            <label for="minutes">Minutos de Celular (1.00 c/u):</label>
+            <input type="text" id="minutes" name="minutes" pattern="\d*" placeholder="Ingrese minutos" required>
+
+            <!-- Tipo de Plan -->
+            <label>Tipo de Plan:</label>
+            <div class="radio-group">
+                <label><input type="radio" name="plan" value="Solo Teléfono" required> Solo Teléfono</label>
+                <label><input type="radio" name="plan" value="Teléfono + Internet"> Teléfono + Internet</label>
+                <label><input type="radio" name="plan" value="Teléfono + Internet + TV"> Teléfono + Internet + TV</label>
+            </div>
+
+            <!-- Otros Servicios -->
+            <label>Otros Servicios:</label>
+            <div class="checkbox-group">
+                <label><input type="checkbox" name="service" value="Antivirus"> Antivirus</label>
+                <label><input type="checkbox" name="service" value="Servicio de Nube"> Servicio de Nube</label>
+                <label><input type="checkbox" name="service" value="Web Services"> Web Services</label>
+            </div>
+
+            <!-- Paquetes -->
+            <label for="package">Paquetes:</label>
+            <div class="package-group">
+                <ul>
+                    <li><input type="radio" name="package" value="Residencial" required> Residencial</li>
+                    <li><input type="radio" name="package" value="PYMES"> PYMES</li>
+                    <li><input type="radio" name="package" value="Empresas"> Empresas</li>
+                </ul>
+            </div>
+
+            <!-- Botón de Calcular -->
+            <div class="submit-btn">
+                <button onclick="alert('GRACIAS POR TU PAGO')">CALCULAR</button>
+            </div>
+
+</body>
+</html>
