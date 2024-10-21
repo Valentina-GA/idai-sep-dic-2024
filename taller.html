@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fuerza Motor</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #4f4f4f; /* Fondo gris oscuro */
+            padding: 20px;
+            font-family: "Times New Roman", Times, serif;
+            font-size: 100px;
+            font-weight: bold;
+            color: black;
+            display: flex;
+            justify-content: space-between; /* Para alinear los logos en los extremos */
+            align-items: center;
+        }
+        header img {
+            height: 150px; /* Ajusta el tamaño aquí para hacerlo más grande */
+        }
+        table {
+            width: 100%;
+            margin-top: 20px;
+            border-collapse: collapse;
+            background-color: white;
+        }
+        td {
+            border: 1px solid #ddd;
+            padding: 10px;
+            vertical-align: top;
+        }
+        .services, .motor-type, .car-data {
+            background-color: #d3d3d3;
+            font-family: "Courier New", Courier, monospace;
+            font-size: medium;
+        }
+        .services input[type="checkbox"],
+        .motor-type input[type="radio"] {
+            margin-right: 10px;
+        }
+        .car-data select, .car-data input[type="text"] {
+            width: 100%;
+            padding: 5px;
+        }
+        .submit-btn {
+            text-align: center;
+            margin-top: 20px;
+        }
+        .submit-btn button {
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        footer {
+            margin-top: 20px;
+            text-align: center;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <img src="logotaller.png" alt="Fuerza Motor Logo"> <!-- Logo del lado izquierdo -->
+    Fuerza Motor
+    <img src="logotaller.png" alt="Fuerza Motor Logo"> <!-- Logo del lado derecho -->
+</header>
+
+<table>
+    <tr>
+        <!-- Primera Columna: Servicios -->
+        <td class="services">
+            <h3>Servicios</h3>
+            <input type="checkbox" id="aceite" name="service">
+            <label for="aceite">Cambio de Aceite y filtro</label><br>
+            <input type="checkbox" id="afinacion" name="service">
+            <label for="afinacion">Afinación General</label><br>
+            <input type="checkbox" id="aire" name="service">
+            <label for="aire">Mantenimiento a Aire Acondicionado</label><br>
+            <input type="checkbox" id="frenos" name="service">
+            <label for="frenos">Servicio de Frenos</label><br>
+            <input type="checkbox" id="filtro" name="service">
+            <label for="filtro">Sustitución del Filtro de aceite</label><br>
+            <input type="checkbox" id="alineacion" name="service">
+            <label for="alineacion">Alineación y Balanceo</label><br>
+            <input type="checkbox" id="enfriamiento" name="service">
+            <label for="enfriamiento">Sistema de Enfriamiento</label><br>
+            <input type="checkbox" id="amortiguadores" name="service">
+            <label for="amortiguadores">Amortiguadores</label>
+            <br>
+            <img src="servicios.png" alt="Fuerza Motor Servicios" width="300px">
+        </td>
+
+        <!-- Segunda Columna: Tipo de motor y auto -->
+        <td class="motor-type">
+            <h3>Tipo de motor</h3>
+            <input type="radio" id="4cilindros" name="motor" value="4cilindros">
+            <label for="4cilindros">4 cilindros</label><br>
+            <input type="radio" id="6cilindros" name="motor" value="6cilindros">
+            <label for="6cilindros">6 cilindros</label><br>
+            <input type="radio" id="8cilindros" name="motor" value="8cilindros">
+            <label for="8cilindros">8 cilindros</label>
+
+            <h3>Tipo de auto</h3>
+            <input type="radio" id="sedan" name="car" value="sedan">
+            <label for="sedan">Sedan</label><br>
+            <input type="radio" id="lujo" name="car" value="lujo">
+            <label for="lujo">Lujo</label><br>
+            <input type="radio" id="deportivo" name="car" value="deportivo">
+            <label for="deportivo">Deportivo</label><br>
+            <input type="radio" id="familiar" name="car" value="familiar">
+            <label for="familiar">Familiar</label><br>
+            <input type="radio" id="camioneta" name="car" value="camioneta">
+            <label for="camioneta">Camioneta</label>
+        </td>
+
+        <!-- Tercera Columna: Datos del auto y pago -->
+        <td class="car-data">
+            <h3>Agenda tu cita</h3>
+            <label for="marca">Marca:</label><br>
+            <input type="text" id="marca" name="marca"><br>
+            <label for="modelo">Modelo:</label><br>
+            <input type="text" id="modelo" name="modelo"><br>
+            <label for="año">Año:</label><br>
+            <input type="text" id="año" name="año"><br>
+            <label for="kilometraje">Kilometraje:</label><br>
+            <input type="text" id="kilometraje" name="kilometraje"><br>
+            <label for="factura">¿Requiere factura?</label><br>
+            <input type="text" id="factura" name="factura"><br>
+
+            <h3>Tipo de pago</h3>
+            <select id="pago" name="pago">
+                <option value="efectivo">Efectivo</option>
+                <option value="tarjeta">Tarjeta de Crédito o Débito</option>
+                <option value="transferencia">Transferencia Electrónica</option>
+                <option value="credito">Crédito a 3 meses</option>
+            </select>
+        </td>
+    </tr>
+</table>
+
+<div class="submit-btn">
+    <button onclick="alert('GRACIAS POR CONFIAR EN NOSOTROS.... SU COCHE ESTÁ EN BUENAS MANOS')">Enviar</button>
+</div>
+
+<footer>
+    <p>DESARROLLADOR:Valentina Garza Arévalo| Matrícula: 2152346 | Correo: al45517@un.edu.mx</p>
+</footer>
+
+</body>
+</html>
