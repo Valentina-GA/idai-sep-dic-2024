@@ -121,7 +121,7 @@
             
                     <button id="calcularBtn">Calcular Pedido</button>
                 </div>
-            
+            </tr>
                 <script>
                     document.getElementById('calcularBtn').addEventListener('click', function() {
                         const numHamburguesas = document.getElementById('numHamburguesas').value;
@@ -133,3 +133,42 @@
                         alert(`Pedido de ${numHamburguesas} hamburguesas para ${nombreComprador} (${telefonoComprador})\nEntrega: ${opcionEntrega}`);
                     });
                 </script>
+</body>
+
+<script>
+
+
+    var tabla = document.getElementsByTagName("table");
+    var registros = document.getElementsByTagName("tr");
+    var inputs = document.getElementsByTagName("input");
+
+
+    // Array con las opciones de ingredientes para la hamburguesa
+const opcionesHamburguesa = [
+    { label: "Tomate", type: "checkbox", name: "tomate" },
+    { label: "Cebolla", type: "checkbox", name: "cebolla" },
+    { label: "Queso Amarillo", type: "checkbox", name: "quesoAmarillo" },
+    { label: "Jamón", type: "checkbox", name: "jamon" },
+    { label: "Aguacate", type: "checkbox", name: "aguacate" }
+];
+
+// Seleccionar el formulario donde se agregarán las opciones
+const form = document.getElementById("burgerForm");
+
+// Función para agregar las opciones al formulario
+opcionesHamburguesa.forEach(opcion => {
+    const label = document.createElement("label");
+    label.textContent = opcion.label;
+
+    const input = document.createElement("input");
+    input.type = opcion.type;
+    input.name = opcion.name;
+
+    // Agregar el input y el label al formulario
+    form.appendChild(label);
+    form.appendChild(input);
+    form.appendChild(document.createElement("br")); // salto de línea
+});
+</script>
+
+</html>
