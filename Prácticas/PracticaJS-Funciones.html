@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de Suma y Resta</title>
+</head>
+<body>
+    <h2>Calculadora de Suma y Resta</h2>
+
+    <label for="num1">Escribe el número 1:</label>
+    <input type="number" id="num1" value="10">
+    <br><br>
+
+    <label for="num2">Escribe el número 2:</label>
+    <input type="number" id="num2" value="2">
+    <br><br>
+
+    <button onclick="sumar()">Sumar los números</button>
+    <button onclick="restar()">Restar los números</button>
+    <br><br>
+
+    <div id="resultado"></div>
+
+    <script>
+        function sumar() {
+            const num1 = parseFloat(document.getElementById("num1").value);
+            const num2 = parseFloat(document.getElementById("num2").value);
+            const suma = num1 + num2;
+            document.getElementById("resultado").innerText = "Resultado: " + suma;
+            alert("El resultado de la suma es: " + suma);
+        }
+
+        function restar() {
+            const num1 = parseFloat(document.getElementById("num1").value);
+            const num2 = parseFloat(document.getElementById("num2").value);
+            const resta = num1 - num2;
+            document.getElementById("resultado").innerText = "Resultado: " + resta;
+            alert("El resultado de la resta es: " + resta);
+        }
+    </script>
+</body>
+</html>
